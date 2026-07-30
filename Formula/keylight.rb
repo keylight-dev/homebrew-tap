@@ -16,11 +16,9 @@ class Keylight < Formula
       sha256 "49380c2103f071bbf20273afb59551e4cff884bb005189e6e1abf30dc07ffda3"
     end
 
-    # No Intel macOS binary is published, so this arch builds from source.
     on_intel do
-      url "https://static.crates.io/crates/keylight-cli/keylight-cli-0.1.1.crate"
-      sha256 "8745077b6fd0478a9c50e46f4327b9cef7b94115dd47228d113e286d446b5216"
-      depends_on "rust" => :build
+      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.1.1/keylight-x86_64-apple-darwin"
+      sha256 "38c440cbc62c8e312f557448518176be341af4e7e44048fc6fd48aa5b1ad659d"
     end
   end
 
