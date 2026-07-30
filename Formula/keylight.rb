@@ -1,7 +1,6 @@
 class Keylight < Formula
   desc "Manage Keylight apps, licenses, and integrations from the terminal"
   homepage "https://keylight.dev"
-  version "0.1.0"
   license "Apache-2.0"
 
   livecheck do
