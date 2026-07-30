@@ -38,6 +38,12 @@ class Keylight < Formula
     end
   end
 
+  # Bottles are built by the tap's CI on pull requests and published by
+  # `brew pr-pull`. They matter more than usual here: without one, brew takes the
+  # build-from-source path, which enforces a minimum Xcode for the running macOS
+  # and hard-fails when the installed Xcode is older — an error about Xcode, on a
+  # machine that only wanted a licensing CLI.
+
   def install
     # The source archive has a Cargo.toml; a downloaded release binary does not.
     if File.exist?("Cargo.toml")
