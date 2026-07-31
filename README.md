@@ -47,3 +47,21 @@ publishes prebuilt binaries for macOS, Linux, and Windows on the
 Issues with the CLI itself belong on
 [keylight-cli](https://github.com/keylight-dev/keylight-cli/issues); this repo is only the
 packaging.
+
+## About Keylight
+
+Keylight is the licensing layer for desktop apps. You keep your own Stripe account,
+your own pricing, and your own customers — Keylight issues the licenses and tells your
+app who is allowed to run it. The `keylight` CLI packaged by this tap is how you manage
+all of that from a terminal instead of the dashboard.
+
+- **License keys** issued automatically when a payment completes
+- **Device activations** with limits you set, and self-serve deactivation
+- **Offline validation** — signed Ed25519 leases your app verifies locally
+- **Feature entitlements** signed into the lease, so tiers work offline too
+
+[keylight.dev](https://keylight.dev) · [Documentation](https://docs.keylight.dev) · [Pricing](https://keylight.dev/pricing)
+
+### Further reading
+
+- [Manage Your App Licensing From the Terminal](https://keylight.dev/blog/manage-licensing-from-terminal)
