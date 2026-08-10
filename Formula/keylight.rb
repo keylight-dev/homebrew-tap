@@ -8,36 +8,29 @@ class Keylight < Formula
     strategy :github_latest
   end
 
-  bottle do
-    root_url "https://github.com/keylight-dev/homebrew-tap/releases/download/keylight-0.2.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "8bcb5c604ee13073e1502768169edb9526a713e0b89e04f1aa02d8194335cbfb"
-    sha256 cellar: :any_skip_relocation, sequoia:      "c602e8791bfa258aed3d692feabe189b4fa69b5305263e03453726dda6db5b6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9bd15bc576f645d9ba604fce4a0bce27a5295d622df9d1c00fae37b73adf04e6"
-  end
-
   # Prebuilt binaries where they are published, source builds everywhere else.
   # The crate is `keylight-cli`; the binary it installs is `keylight`.
   on_macos do
     on_arm do
-      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.2.0/keylight-aarch64-apple-darwin"
-      sha256 "99fafc54e964e136fc7870805ef5ef20bdbb6e73f2918f8ee914390e07fc63dd"
+      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.2.1/keylight-aarch64-apple-darwin"
+      sha256 "3cfea466abe0ce2aeb2f605a6865fa32909238015c39e6593aca1b6e5991da00"
     end
 
     on_intel do
-      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.2.0/keylight-x86_64-apple-darwin"
-      sha256 "1fdc6331629d25a54c4758f5fbab648e64788a47384c42f5104f58caaaaa0902"
+      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.2.1/keylight-x86_64-apple-darwin"
+      sha256 "8c68943464dbf03e04f2963f03305ce65ec5e3b034ca8076fead815bc3efd2de"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.2.0/keylight-x86_64-unknown-linux-gnu"
-      sha256 "3b71a0b3b667891b4f984dd3ded39cdb5a810ca02e167876b54760ee346ba163"
+      url "https://github.com/keylight-dev/keylight-cli/releases/download/v0.2.1/keylight-x86_64-unknown-linux-gnu"
+      sha256 "31d0c0286c498693a9de51b133b174c5b13e602b003cfd4889ac2446414416b6"
     end
 
     on_arm do
-      url "https://static.crates.io/crates/keylight-cli/keylight-cli-0.2.0.crate"
-      sha256 "f5fe512014b2690826f3a2eb27dabe1bf1dee16b59f190617abf9f3eff232703"
+      url "https://static.crates.io/crates/keylight-cli/keylight-cli-0.2.1.crate"
+      sha256 "6e1119b5b162b90f597471ac408125929d576f92ab3bd4a043495ae1f65bbef3"
       depends_on "rust" => :build
     end
   end
