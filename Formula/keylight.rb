@@ -8,6 +8,13 @@ class Keylight < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/keylight-dev/homebrew-tap/releases/download/keylight-0.2.2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "7cc852547b80d40a7d5f711b0ef4716a34d6e701207dd8d93bd582b49b127ca0"
+    sha256 cellar: :any_skip_relocation, sequoia:      "9cbd7678c7fe9ecd693147da2bf37105fc2891acbce6de0cf57431f08e092ba8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "35e14677ac736b509d7348c7b482c9e074fa5c9768e76625ae54d9dade3adcde"
+  end
+
   # Prebuilt binaries where they are published, source builds everywhere else.
   # The crate is `keylight-cli`; the binary it installs is `keylight`.
   on_macos do
